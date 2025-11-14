@@ -146,8 +146,8 @@ export const MoviesSlide: React.FC<MoviesSlideTypes> = ({ title, data, className
                                             />
                                         </div>
                                         <div className="p-4">
-                                            <div className="mb-2 flex items-center justify-between">
-                                                <p className="text-xl font-semibold text-white">
+                                            <div className="mb-2 flex justify-between">
+                                                <p className="text-sm font-semibold text-white w-48">
                                                     {movie.name}
                                                 </p>
                                                 {
@@ -155,7 +155,7 @@ export const MoviesSlide: React.FC<MoviesSlideTypes> = ({ title, data, className
                                                         ? (
                                                             <FaHeart
                                                                 onClick={() => handleWatchlist(movie)}
-                                                                className="text-red-500 cursor-pointer mr-2"
+                                                                className="text-red-500 cursor-pointer mr-2 text-sm"
                                                             />
                                                         )
                                                         : (

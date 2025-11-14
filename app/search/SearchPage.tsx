@@ -128,7 +128,7 @@ export default function SearchPage() {
                             {/* Next */}
                             <li>
                                 <button
-                                    onClick={handleNext} 
+                                    onClick={handleNext}
                                     disabled={page === totalPages}
                                     className="relative block rounded px-3 py-1.5 text-sm transition disabled:opacity-50 bg-red-500 text-white"
                                 >
