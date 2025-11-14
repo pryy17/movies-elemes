@@ -53,7 +53,7 @@ export default function Home() {
     <div className="min-h-screen bg-zinc-50 font-sans dark:bg-black">
       <main className="py-32 px-16 bg-white dark:bg-black sm:items-start">
         <div className="border-2 border-gray-400 px-9 py-7 rounded-2xl">
-          <div className="flex md:flex mb-8 justify-between">
+          <div className="flex-row md:flex mb-8 justify-between">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
               <button tabIndex={0} onClick={() => setTypeFilm("movies")} className="bg-red-700 hover:bg-red-950 text-white py-2 px-4 rounded">
                 Movies
