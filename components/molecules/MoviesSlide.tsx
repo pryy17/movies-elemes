@@ -101,7 +101,7 @@ export const MoviesSlide: React.FC<MoviesSlideTypes> = ({ title, data, className
                 </button>
                 <Swiper
                     modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-                    spaceBetween={200}
+                    spaceBetween={50}
                     slidesPerView={5}
                     pagination={{ clickable: true }}
                     scrollbar={{ draggable: true }}
@@ -125,14 +125,20 @@ export const MoviesSlide: React.FC<MoviesSlideTypes> = ({ title, data, className
                         delay: 3000,
                         disableOnInteraction: false,
                     }}
+                    breakpoints={{
+                        320: { slidesPerView: 1, spaceBetween: 20 }, 
+                        640: { slidesPerView: 2, spaceBetween: 30 },  
+                        1024: { slidesPerView: 4, spaceBetween: 40 }, 
+                        1280: { slidesPerView: 5, spaceBetween: 50 }  
+                    }}
                 >
                     {
                         data.map((movie) => (
 
                             <SwiperSlide>
                                 <div id="card">
-                                    <div className="relative flex flex-col my-6 bg-black shadow-sm border border-[#999999] rounded-lg w-72">
-                                        <div className="relative p-2.5 h-96 overflow-hidden rounded-xl bg-clip-border">
+                                    <div className="relative flex flex-col my-6 bg-black shadow-sm border border-[#999999] rounded-lg md:w-52 xl:72">
+                                        <div className="relative p-2.5 h-60 overflow-hidden rounded-xl bg-clip-border">
                                             <img
                                                 src={movie.img}
                                                 alt="card-image"

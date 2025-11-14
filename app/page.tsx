@@ -53,8 +53,8 @@ export default function Home() {
     <div className="min-h-screen bg-zinc-50 font-sans dark:bg-black">
       <main className="py-32 px-16 bg-white dark:bg-black sm:items-start">
         <div className="border-2 border-gray-400 px-9 py-7 rounded-2xl">
-          <div className="flex mb-8 justify-between">
-            <div className="grid grid-cols-4 gap-5">
+          <div className="flex md:flex mb-8 justify-between">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
               <button tabIndex={0} onClick={() => setTypeFilm("movies")} className="bg-red-700 hover:bg-red-950 text-white py-2 px-4 rounded">
                 Movies
               </button>
@@ -62,7 +62,7 @@ export default function Home() {
                 TV & Series
               </button>
               <div className="flex" tabIndex={2}>
-                <div className="border-l-2 border-white w-1 mr-4" />
+                <div className="border-l-2 border-white w-1 mr-4 hidden md:block" />
                 <Modal isOpen={isOpen} setIsOpen={setIsOpen} textOpen="Watch List" children={
                   <>
                     <Dialog.Title

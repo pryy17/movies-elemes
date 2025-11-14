@@ -84,7 +84,7 @@ export default function SearchPage() {
                     <div className="flex mb-8 justify-between">
                         <Search setQuery={setQuerySearch} />
                     </div>
-                    <div className='grid grid-cols-4 gap-5 w-full justify-center'>
+                    <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 w-full justify-center'>
                         {
                             dataSearch.map((movie, key) => (
                                 <Card img={movie.img} name={movie.name} key={key} />
